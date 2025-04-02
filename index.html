@@ -1,961 +1,481 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-  <head>
-
-    <meta charset="UTF-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Mohammed Abdul Azeem - Portfolio</title>
-
-    <link
-
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-
-      rel="stylesheet"
-
-    />
-
-    <link
-
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-
-      rel="stylesheet"
-
-    />
-
-    <link
-
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-
-      rel="stylesheet"
-
-    />
-
-    <link rel="stylesheet" href="styles.css" />
-
-  </head>
-
-  <body class="bg-gray-100 text-gray-900">
-
-    <!-- Navbar -->
-
-    <nav class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
-
-      <div class="container mx-auto flex justify-between items-center">
-
-        <a href="#" class="text-white text-lg font-bold">Portfolio</a>
-
-        <div class="hidden md:flex space-x-4">
-
-          <a href="#summary" class="text-gray-300 hover:text-white">Summary</a>
-
-          <a href="#skills" class="text-gray-300 hover:text-white">Skills</a>
-
-          <a href="#experience" class="text-gray-300 hover:text-white"
-
-            >Experience</a
-
-          >
-
-          <a href="#projects" class="text-gray-300 hover:text-white"
-
-            >Projects</a
-
-          >
-
-          <a href="#education" class="text-gray-300 hover:text-white"
-
-            >Education</a
-
-          >
-
-          <a href="#test-scores" class="text-gray-300 hover:text-white"
-
-            >Test Scores</a
-
-          >
-
-          <a href="#extracurricular" class="text-gray-300 hover:text-white"
-
-            >Extracurricular</a
-
-          >
-
-          <a href="#hobbies" class="text-gray-300 hover:text-white">Hobbies</a>
-
-          <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
-
-        </div>
-
-      </div>
-
-    </nav>
-
-
-
-    <!-- Hero Section -->
-
-    <!-- Hero Section -->
-
-    <header
-
-      class="relative bg-cover bg-center h-screen flex items-center"
-
-      style="
-
-        background-image: url('https://source.unsplash.com/1600x900/?coding,tech');
-
-      "
-
-    >
-
-      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-
-      <div class="relative z-10 container mx-auto text-center px-4">
-
-        <div
-
-          class="max-w-2xl mx-auto py-16 px-6 bg-white bg-opacity-70 rounded-lg shadow-lg"
-
-        >
-
-          <h1 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-down">
-
-            Mohammed Abdul Azeem
-
-          </h1>
-
-          <p class="text-base md:text-lg mb-6" data-aos="fade-up">
-
-            Software Developement Engineer @ Innovations Labs, ICICI Bank | Passionate about Emerging Technologies | B.Tech in Computer Science and Engineering @ IIT Palakkad
-
-          </p>
-
-          <a
-
-            href="#contact"
-
-            class="bg-blue-500 text-white py-2 px-6 rounded-full text-base font-semibold hover:bg-blue-600 transition duration-300"
-
-          >
-
-            Get in Touch
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </header>
-
-
-
-    <!-- Summary Section -->
-
-    <section id="summary" class="py-16 bg-white">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
-
-          Summary
-
-        </h2>
-
-        <p class="text-center max-w-2xl mx-auto" data-aos="fade-up">
-
-          Software Developer with 1 year of experience in developing and
-
-          maintaining applications. Proven ability to work independently or
-
-          within a team. Strong problem-solving skills, attention to detail, and
-
-          a passion for learning emerging technologies.Eager to expand
-
-          knowledge, skills, and utilise them innovatively to drive company
-
-          success.
-
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Skills Section -->
-
-    <section id="skills" class="py-16 bg-gray-100">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
-
-          Skills
-
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="zoom-in">
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <h4 class="text-xl font-semibold mb-4">
-
-              <i class="fas fa-code"></i> Programming Languages
-
-            </h4>
-
-            <ul>
-
-              <li>Python</li>
-
-              <li>C++</li>
-
-              <li>SQL</li>
-
-              <li>JavaScript</li>
-
-            </ul>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <h4 class="text-xl font-semibold mb-4">
-
-              <i class="fas fa-laptop-code"></i> Development
-
-            </h4>
-
-            <ul>
-
-              <li>Django</li>
-
-              <li>Flask</li>
-
-              <li>DRF</li>
-
-              <li>Unix/Linux</li>
-
-            </ul>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <h4 class="text-xl font-semibold mb-4">
-
-              <i class="fas fa-database"></i> Databases
-
-            </h4>
-
-            <ul>
-
-              <li>PostgreSQL</li>
-
-              <li>MongoDB</li>
-
-            </ul>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <h4 class="text-xl font-semibold mb-4">
-
-              <i class="fas fa-tools"></i> Tools and Platforms
-
-            </h4>
-
-            <ul>
-
-              <li>Git/GitHub</li>
-
-              <li>Jenkins</li>
-
-              <li>VS Code</li>
-
-              <li>Jira</li>
-
-              <li>Confluence</li>
-
-            </ul>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <h4 class="text-xl font-semibold mb-4">
-
-              <i class="fas fa-cogs"></i> Software Engineering
-
-            </h4>
-
-            <ul>
-
-              <li>Code Review</li>
-
-              <li>Code Quality</li>
-
-              <li>Testing</li>
-
-              <li>Debugging</li>
-
-              <li>CI/CD</li>
-
-            </ul>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <h4 class="text-xl font-semibold mb-4">
-
-              <i class="fas fa-cloud"></i> Cloud
-
-            </h4>
-
-            <ul>
-
-              <li>AWS (EC2, S3, Lambda, API Gateway, SageMaker)</li>
-
-              <li>Databricks</li>
-
-            </ul>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <h4 class="text-xl font-semibold mb-4">
-
-              <i class="fas fa-user-friends"></i> Soft Skills
-
-            </h4>
-
-            <ul>
-
-              <li>Problem-solving</li>
-
-              <li>Quick Learner</li>
-
-              <li>Analytical Thinking</li>
-
-              <li>Collaboration</li>
-
-              <li>Continuous Learning</li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Experience Section -->
-
-    <section id="experience" class="py-16 bg-white">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
-
-          Professional Experience
-
-        </h2>
-
-        <div class="space-y-8">
-
-          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
-
-            <h4 class="text-xl font-semibold">
-
-              Software Engineer at Innovation Labs, ICICI (Jun'23 - Present)
-
-            </h4>
-
-            <p>
-
-              Tools & Technologies: Python, Django, DRF, Flask, Git, AWS, PostgreSQL,
-
-              MongoDB, VS Code
-
-            </p>
-
-            <ul class="list-disc list-inside mt-2">
-
-              <li>
-
-                Developed an automated inactivity-based logout feature, enhancing system security and mitigating unauthorised access risks, leading to a 30% reduction in security incidents.
-
-              </li>
-
-              <li>
-
-                Created an API Gateway for an application using AWS Lambda-based authentication, improving security and access control, which resulted in a 100% decrease in unauthorised access attempts.
-
-              </li>
-
-              <li>
-
-                Developed a data management solution by automating data purging, optimizing database performance,
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohammed Abdul Azeem - Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-lg font-bold">Portfolio</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="#summary" class="text-gray-300 hover:text-white">Summary</a>
+          <a href="#skills" class="text-gray-300 hover:text-white">Skills</a>
+          <a href="#experience" class="text-gray-300 hover:text-white"
+            >Experience</a
+          >
+          <a href="#projects" class="text-gray-300 hover:text-white"
+            >Projects</a
+          >
+          <a href="#education" class="text-gray-300 hover:text-white"
+            >Education</a
+          >
+          <a href="#test-scores" class="text-gray-300 hover:text-white"
+            >Test Scores</a
+          >
+          <a href="#extracurricular" class="text-gray-300 hover:text-white"
+            >Extracurricular</a
+          >
+          <a href="#hobbies" class="text-gray-300 hover:text-white">Hobbies</a>
+          <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <header
+      class="relative bg-cover bg-center h-screen flex items-center"
+      style="
+        background-image: url('https://source.unsplash.com/1600x900/?coding,tech');
+      "
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div class="relative z-10 container mx-auto text-center px-4">
+        <div
+          class="max-w-2xl mx-auto py-16 px-6 bg-white bg-opacity-70 rounded-lg shadow-lg"
+        >
+          <h1 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-down">
+            Mohammed Abdul Azeem
+          </h1>
+          <p class="text-base md:text-lg mb-6" data-aos="fade-up">
+            Software Developement Engineer @ Innovations Labs, ICICI Bank | Passionate about Emerging Technologies | B.Tech in Computer Science and Engineering @ IIT Palakkad
+          </p>
+          <a
+            href="#contact"
+            class="bg-blue-500 text-white py-2 px-6 rounded-full text-base font-semibold hover:bg-blue-600 transition duration-300"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Summary Section -->
+    <section id="summary" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+          Summary
+        </h2>
+        <p class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+          Software Developer with 1 year of experience in developing and
+          maintaining applications. Proven ability to work independently or
+          within a team. Strong problem-solving skills, attention to detail, and
+          a passion for learning emerging technologies.Eager to expand
+          knowledge, skills, and utilise them innovatively to drive company
+          success.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+          Skills
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="zoom-in">
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h4 class="text-xl font-semibold mb-4">
+              <i class="fas fa-code"></i> Programming Languages
+            </h4>
+            <ul>
+              <li>Python</li>
+              <li>C++</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h4 class="text-xl font-semibold mb-4">
+              <i class="fas fa-laptop-code"></i> Development
+            </h4>
+            <ul>
+              <li>Django</li>
+              <li>Flask</li>
+              <li>DRF</li>
+              <li>Unix/Linux</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h4 class="text-xl font-semibold mb-4">
+              <i class="fas fa-database"></i> Databases
+            </h4>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h4 class="text-xl font-semibold mb-4">
+              <i class="fas fa-tools"></i> Tools and Platforms
+            </h4>
+            <ul>
+              <li>Git/GitHub</li>
+              <li>Jenkins</li>
+              <li>VS Code</li>
+              <li>Jira</li>
+              <li>Confluence</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h4 class="text-xl font-semibold mb-4">
+              <i class="fas fa-cogs"></i> Software Engineering
+            </h4>
+            <ul>
+              <li>Code Review</li>
+              <li>Code Quality</li>
+              <li>Testing</li>
+              <li>Debugging</li>
+              <li>CI/CD</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h4 class="text-xl font-semibold mb-4">
+              <i class="fas fa-cloud"></i> Cloud
+            </h4>
+            <ul>
+              <li>AWS (EC2, S3, Lambda, API Gateway, SageMaker)</li>
+              <li>Databricks</li>
+            </ul>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h4 class="text-xl font-semibold mb-4">
+              <i class="fas fa-user-friends"></i> Soft Skills
+            </h4>
+            <ul>
+              <li>Problem-solving</li>
+              <li>Quick Learner</li>
+              <li>Analytical Thinking</li>
+              <li>Collaboration</li>
+              <li>Continuous Learning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+          Professional Experience
+        </h2>
+        <div class="space-y-8">
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+            <h4 class="text-xl font-semibold">
+              Software Engineer at Innovation Labs, ICICI (Jun'23 - Present)
+            </h4>
+            <p>
+              Tools & Technologies: Python, Django, DRF, Flask, Git, AWS, PostgreSQL,
+              MongoDB, VS Code
+            </p>
+            <ul class="list-disc list-inside mt-2">
+              <li>
+                Developed an automated inactivity-based logout feature, enhancing system security and mitigating unauthorised access risks, leading to a 30% reduction in security incidents.
+              </li>
+              <li>
+                Created an API Gateway for an application using AWS Lambda-based authentication, improving security and access control, which resulted in a 100% decrease in unauthorised access attempts.
+              </li>
+              <li>
+                Developed a data management solution by automating data purging, optimizing database performance,
 cutting down storage usage by 25%, and improving query response times by 20%.
-
-              </li>
-
-              <li>
-
-                Collaborated with cross-functional teams and stakeholders to build and deploy proof-of-concepts (POCs)
-
+              </li>
+              <li>
+                Collaborated with cross-functional teams and stakeholders to build and deploy proof-of-concepts (POCs)
 for potential use cases, including construction monitoring and crop yield estimation.
-
-              </li>
-
-              <li>
-
-                Participated in design and code reviews, implementing best practices for testing, debugging, and
-
+              </li>
+              <li>
+                Participated in design and code reviews, implementing best practices for testing, debugging, and
 documentation, while utilizing CI/CD pipelines to streamline the SDLC.
-
-              </li>
-
-              <li>
-
-                Actively contributed in an Agile environment and embraced continuous learning to ensure efficient and
-
+              </li>
+              <li>
+                Actively contributed in an Agile environment and embraced continuous learning to ensure efficient and
 reliable software delivery.
-
-              </li>
-
-            </ul>
-
-          </div>
-
-          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
-
-            <h4 class="text-xl font-semibold">
-
-              Software Development Intern at Kramah Software India Pvt Ltd
-
-              (May'22 - Jul'22)
-
-            </h4>
-
-            <p>Tools & Technologies: Bootstrap, HTML, PHP, SQL</p>
-
-            <ul class="list-disc list-inside mt-2">
-
-              <li>
-
-                Upgraded a university website by enhancing the UI and fixing functionality issues, resulting in a 30%
-
+              </li>
+            </ul>
+          </div>
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+            <h4 class="text-xl font-semibold">
+              Software Development Intern at Kramah Software India Pvt Ltd
+              (May'22 - Jul'22)
+            </h4>
+            <p>Tools & Technologies: Bootstrap, HTML, PHP, SQL</p>
+            <ul class="list-disc list-inside mt-2">
+              <li>
+                Upgraded a university website by enhancing the UI and fixing functionality issues, resulting in a 30%
 increase in user engagement and a smoother user experience.
-
-              </li>
-
-              <li>
-
-                Successfully triaged and resolved over 50+ reported bugs in both development and production
-
+              </li>
+              <li>
+                Successfully triaged and resolved over 50+ reported bugs in both development and production
 environment through effective debugging and troubleshooting.
-
-              </li>
-
-              <li>
-
-                Refactored legacy code, creating reusable modules and reducing
-
-                codebase size by 40%.
-
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Projects Section -->
-
-    <section id="projects" class="py-16 bg-gray-100">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
-
-          Personal Projects
-
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <a
-
-            href="https://github.com/Viper678/Face-Recognition-App"
-
-            target="_blank, class="text-blue-500"
-
-          >
-
-            <div class="bg-white p-6 shadow-lg rounded-lg">
-
-              <h4 class="text-xl font-semibold mb-4">Face Recognition App</h4>
-
-              <p>
-
-                Developed a face recognition application using the face
-
-                recognition library for real-time facial detection and
-
-                recognition. Implemented a k-dimensional tree (k-d tree)
-
-                algorithm to optimize and identify the closest matching face
-
-                from a dataset. Integrated MongoDB for efficient data storage,
-
-                including recognized faces and attendance logs. Deployed the
-
-                system to mark attendance automatically, improving accuracy and
-
-                speed in comparison to manual methods.
-
-              </p>
-
-            </div>
-
-          </a>
-
-          <a
-
-            href="https://github.com/Viper678/Banking-Database"
-
-            target="_blank, class="text-blue-500"
-
-          >
-
-            <div class="bg-white p-6 shadow-lg rounded-lg">
-
-              <h4 class="text-xl font-semibold mb-4">
-
-                Banking Database Management
-
-              </h4>
-
-              <p>
-
-                Designed a comprehensive banking system database with ER
-
-                diagrams, tables, and constraints. Implemented procedures,
-
-                functions, and triggers for core banking operations. Implemented
-
-                a role-based access control system with three main roles
-
-                (Manager, Officer, and Customer), each with specific privileges
-
-                and access levels to the database. Created optimized indices and
-
-                views, reducing query execution time by 30% and streamlining
-
-                data access for different user roles.
-
-              </p>
-
-            </div>
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Education Section -->
-
-    <section id="education" class="py-16 bg-white">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
-
-          Education
-
-        </h2>
-
-        <div class="space-y-8">
-
-          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
-
-            <h4 class="text-xl font-semibold">
-
-              B.Tech in Computer Science and Engineering, IIT Palakkad (Aug'19 -
-
-              May'23)
-
-            </h4>
-
-            <p>
-
-              Relevant Coursework: Data Structures and Algorithms, Operating
-
-              Systems, Database Management Systems, Computer Networks, Computer
-
-              Vision, Natural Language Processing
-
-            </p>
-
-            <p>
-
-              <a
-
-                href="https://github.com/Viper678/Vertex-Cover"
-
-                target="_blank"
-
-                class="text-blue-500"
-
-                >Term Project: Parameterized Algorithms and Experiments</a
-
-              >
-
-            </p>
-
-            <ul class="list-disc list-inside mt-2">
-
-              <li>
-
-                Conducted in-depth research on the Vertex Cover problem as part
-
-                of a larger project focused on parameterized algorithms and
-
-                their applications to NP-hard problems.
-
-              </li>
-
-              <li>
-
-                Implemented various approaches, including naive, branching, and
-
-                C(n,k) algorithms, and applied kernelization techniques such as
-
-                LP-based kernels to reduce problem size.
-
-              </li>
-
-              <li>
-
-                Evaluated the performance of these algorithms on benchmark
-
-                instances, comparing results pre- and post-kernelization to
-
-                optimize runtime.
-
-              </li>
-
-            </ul>
-
-          </div>
-
-          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
-
-            <h4 class="text-xl font-semibold">
-
-              Intermediate Education, HIE (May'17 - May'19)
-
-            </h4>
-
-            <p>Courses: Math, Physics, Chemistry</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Test Scores Section -->
-
-    <section id="test-scores" class="py-16 bg-gray-100">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
-
-          Test Scores
-
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">JEE Advanced</p>
-
-            <p class="text-xl">AIR 3,787</p>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">JEE Mains</p>
-
-            <p class="text-xl">AIR 5,484</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Extracurricular Section -->
-
-    <section id="extracurricular" class="py-16 bg-white">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
-
-          Extracurricular
-
-        </h2>
-
-        <div class="space-y-4 text-center">
-
-          <div class="bg-gray-50 p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">Hackathon Participation</p>
-
-            <p>
-
-              Participated in a hackathon where we built a prototype system for
-
-              central KYC using Django and face matching techniques for identity
-
-              verification.
-
-            </p>
-
-          </div>
-
-          <div class="bg-gray-50 p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">Mentorship</p>
-
-            <p>
-
-              Provided mentorship and guidance to junior team members, fostering
-
-              knowledge sharing and technical growth within the team.
-
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Hobbies Section -->
-
-    <section id="hobbies" class="py-16 bg-gray-100">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
-
-          Hobbies and Interests
-
-        </h2>
-
-        <div class="space-y-4 text-center">
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">Emerging Technologies</p>
-
-            <p>
-
-              Enthusiastic about staying updated on cutting-edge technologies
-
-              like AI and quantum computing.
-
-            </p>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">Astrophysics</p>
-
-            <p>
-
-              Fascinated by the mysteries of the universe, regularly exploring
-
-              scientific literature and developments in space exploration.
-
-            </p>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">Sports</p>
-
-            <p>Cricket, Table Tennis</p>
-
-          </div>
-
-          <div class="bg-white p-6 shadow-lg rounded-lg">
-
-            <p class="text-lg font-semibold">Reading</p>
-
-            <p>Novels, Manga</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Contact Section -->
-
-    <section id="contact" class="py-16 bg-gray-100">
-
-      <div class="container mx-auto px-4">
-
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
-
-          Contact
-
-        </h2>
-
-        <div class="flex flex-col items-center">
-
-          <p class="mb-4 text-lg">
-
-            Feel free to reach out to me through any of the following:
-
-          </p>
-
-          <ul class="space-y-4 text-lg">
-
-            <li>
-
-              <a
-
-                href="mailto:mohammedabdulazeem821@gmail.com"
-
-                class="text-blue-500 hover:underline"
-
-                >mohammedabdulazeem821@gmail.com</a
-
-              >
-
-            </li>
-
-            <li>
-
-              <a
-
-                href="https://www.linkedin.com/in/mohammed-abdul-azeem-857104192/"
-
-                target="_blank"
-
-                class="text-blue-500 hover:underline"
-
-                >LinkedIn</a
-
-              >
-
-            </li>
-
-            <li>
-
-              <a
-
-                href="https://github.com/Viper678"
-
-                target="_blank"
-
-                class="text-blue-500 hover:underline"
-
-                >GitHub</a
-
-              >
-
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- Footer -->
-
-    <footer class="bg-gray-800 text-white py-4">
-
-      <div class="container mx-auto text-center">
-
-        <p>&copy; 2024 Mohammed Abdul Azeem. All rights reserved.</p>
-
-      </div>
-
-    </footer>
-
-
-
-    <!-- AOS Library -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <script>
-
-      AOS.init();
-
-    </script>
-
-  </body>
-
+              </li>
+              <li>
+                Refactored legacy code, creating reusable modules and reducing
+                codebase size by 40%.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+          Personal Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <a
+            href="https://github.com/Viper678/Face-Recognition-App"
+            target="_blank, class="text-blue-500"
+          >
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+              <h4 class="text-xl font-semibold mb-4">Face Recognition App</h4>
+              <p>
+                Developed a face recognition application using the face
+                recognition library for real-time facial detection and
+                recognition. Implemented a k-dimensional tree (k-d tree)
+                algorithm to optimize and identify the closest matching face
+                from a dataset. Integrated MongoDB for efficient data storage,
+                including recognized faces and attendance logs. Deployed the
+                system to mark attendance automatically, improving accuracy and
+                speed in comparison to manual methods.
+              </p>
+            </div>
+          </a>
+          <a
+            href="https://github.com/Viper678/Banking-Database"
+            target="_blank, class="text-blue-500"
+          >
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+              <h4 class="text-xl font-semibold mb-4">
+                Banking Database Management
+              </h4>
+              <p>
+                Designed a comprehensive banking system database with ER
+                diagrams, tables, and constraints. Implemented procedures,
+                functions, and triggers for core banking operations. Implemented
+                a role-based access control system with three main roles
+                (Manager, Officer, and Customer), each with specific privileges
+                and access levels to the database. Created optimized indices and
+                views, reducing query execution time by 30% and streamlining
+                data access for different user roles.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+          Education
+        </h2>
+        <div class="space-y-8">
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+            <h4 class="text-xl font-semibold">
+              B.Tech in Computer Science and Engineering, IIT Palakkad (Aug'19 -
+              May'23)
+            </h4>
+            <p>
+              Relevant Coursework: Data Structures and Algorithms, Operating
+              Systems, Database Management Systems, Computer Networks, Computer
+              Vision, Natural Language Processing
+            </p>
+            <p>
+              <a
+                href="https://github.com/Viper678/Vertex-Cover"
+                target="_blank"
+                class="text-blue-500"
+                >Term Project: Parameterized Algorithms and Experiments</a
+              >
+            </p>
+            <ul class="list-disc list-inside mt-2">
+              <li>
+                Conducted in-depth research on the Vertex Cover problem as part
+                of a larger project focused on parameterized algorithms and
+                their applications to NP-hard problems.
+              </li>
+              <li>
+                Implemented various approaches, including naive, branching, and
+                C(n,k) algorithms, and applied kernelization techniques such as
+                LP-based kernels to reduce problem size.
+              </li>
+              <li>
+                Evaluated the performance of these algorithms on benchmark
+                instances, comparing results pre- and post-kernelization to
+                optimize runtime.
+              </li>
+            </ul>
+          </div>
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+            <h4 class="text-xl font-semibold">
+              Intermediate Education, HIE (May'17 - May'19)
+            </h4>
+            <p>Courses: Math, Physics, Chemistry</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Test Scores Section -->
+    <section id="test-scores" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+          Test Scores
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">JEE Advanced</p>
+            <p class="text-xl">AIR 3,787</p>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">JEE Mains</p>
+            <p class="text-xl">AIR 5,484</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extracurricular Section -->
+    <section id="extracurricular" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+          Extracurricular
+        </h2>
+        <div class="space-y-4 text-center">
+          <div class="bg-gray-50 p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">Hackathon Participation</p>
+            <p>
+              Participated in a hackathon where we built a prototype system for
+              central KYC using Django and face matching techniques for identity
+              verification.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">Mentorship</p>
+            <p>
+              Provided mentorship and guidance to junior team members, fostering
+              knowledge sharing and technical growth within the team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+          Hobbies and Interests
+        </h2>
+        <div class="space-y-4 text-center">
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">Emerging Technologies</p>
+            <p>
+              Enthusiastic about staying updated on cutting-edge technologies
+              like AI and quantum computing.
+            </p>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">Astrophysics</p>
+            <p>
+              Fascinated by the mysteries of the universe, regularly exploring
+              scientific literature and developments in space exploration.
+            </p>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">Sports</p>
+            <p>Cricket, Table Tennis</p>
+          </div>
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+            <p class="text-lg font-semibold">Reading</p>
+            <p>Novels, Manga</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+          Contact
+        </h2>
+        <div class="flex flex-col items-center">
+          <p class="mb-4 text-lg">
+            Feel free to reach out to me through any of the following:
+          </p>
+          <ul class="space-y-4 text-lg">
+            <li>
+              <a
+                href="mailto:mohammedabdulazeem821@gmail.com"
+                class="text-blue-500 hover:underline"
+                >mohammedabdulazeem821@gmail.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/mohammed-abdul-azeem-857104192/"
+                target="_blank"
+                class="text-blue-500 hover:underline"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Viper678"
+                target="_blank"
+                class="text-blue-500 hover:underline"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Mohammed Abdul Azeem. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
