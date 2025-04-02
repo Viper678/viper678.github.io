@@ -1,519 +1,961 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohammed Abdul Azeem - Portfolio</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<html lang="en">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <head>
 
-    <style>
-      @font-face {
-        font-family: 'LucideIcons';
-        src: url('https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf') format('truetype');
-      }
-      .lucide {
-        font-family: 'LucideIcons';
-        font-size: 1.25rem; /* Adjust size as needed */
-        line-height: 1;
-        vertical-align: middle;
-        margin-right: 0.5rem; /* Space between icon and text */
-      }
-      /* Add specific icon content using ::before pseudo-element */
-      .lucide-code::before { content: '\e132'; }
-      .lucide-laptop::before { content: '\e34f'; }
-      .lucide-database::before { content: '\e14e'; }
-      .lucide-wrench::before { content: '\e533'; }
-      .lucide-cloud::before { content: '\e118'; }
-      .lucide-users::before { content: '\e51e'; }
-      .lucide-mail::before { content: '\e37b'; }
-      .lucide-linkedin::before { content: '\e355'; }
-      .lucide-github::before { content: '\e2e8'; }
-      .lucide-briefcase::before { content: '\e0d8'; }
-      .lucide-graduation-cap::before { content: '\e2f6'; }
-      .lucide-award::before { content: '\e081'; }
-      .lucide-puzzle::before { content: '\e41c'; }
-      .lucide-gamepad-2::before { content: '\e2e3'; }
-      .lucide-contact::before { content: '\e13a'; }
-      .lucide-menu::before { content: '\e384'; }
-      .lucide-x::before { content: '\e534'; }
-      .lucide-link::before { content: '\e354'; }
-    </style>
+    <meta charset="UTF-8" />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              primary: { // Example primary color palette
-                DEFAULT: '#4f46e5', // indigo-600
-                '50': '#eef2ff',
-                '100': '#e0e7ff',
-                '200': '#c7d2fe',
-                '300': '#a5b4fc',
-                '400': '#818cf8',
-                '500': '#6366f1',
-                '600': '#4f46e5',
-                '700': '#4338ca',
-                '800': '#3730a3',
-                '900': '#312e81',
-                '950': '#1e1b4b',
-              },
-            }
-          }
-        }
-      }
-    </script>
-  </head>
-  <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <nav class="bg-slate-900/70 backdrop-blur-md text-white p-4 shadow-lg sticky top-0 z-50 transition-all duration-300" id="navbar">
-      <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-xl font-bold tracking-tight hover:text-primary-300 transition-colors">MAA Portfolio</a>
-        <div class="hidden md:flex space-x-6 items-center">
-          <a href="#summary" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Summary</a>
-          <a href="#skills" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Skills</a>
-          <a href="#experience" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Experience</a>
-          <a href="#projects" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Projects</a>
-          <a href="#education" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Education</a>
-          <a href="#achievements" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Achievements</a>
-          <a href="#extracurricular" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Extracurricular</a>
-          <a href="#hobbies" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Hobbies</a>
-          <a href="#contact" class="bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 shadow-md hover:shadow-lg">
-            Contact
-          </a>
-        </div>
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-white focus:outline-none">
-            <i class="lucide lucide-menu text-2xl"></i>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-        <a href="#summary" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Summary</a>
-        <a href="#skills" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Skills</a>
-        <a href="#experience" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Experience</a>
-        <a href="#projects" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Projects</a>
-        <a href="#education" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Education</a>
-        <a href="#achievements" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Achievements</a>
-        <a href="#extracurricular" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Extracurricular</a>
-        <a href="#hobbies" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Hobbies</a>
-        <a href="#contact" class="block bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-full font-semibold transition duration-300 shadow-md hover:shadow-lg mt-2">
-          Contact
-        </a>
-      </div>
-    </nav>
+    <title>Mohammed Abdul Azeem - Portfolio</title>
 
-    <header
-      class="relative bg-cover bg-center min-h-screen flex items-center justify-center py-20 px-4"
-      style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');"
-      onerror="this.onerror=null; this.style.backgroundImage='url(https://placehold.co/1600x900/333333/cccccc?text=Tech+Background)'"
-    >
-      <div class="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/80"></div>
-      <div class="relative z-10 container mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
-        <div class="max-w-3xl mx-auto py-16 px-8 bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-md">
-            Mohammed Abdul Azeem
-          </h1>
-          <p class="text-lg md:text-xl mb-8 text-slate-200 drop-shadow-sm max-w-2xl mx-auto">
-            Software Engineer @ ICICI Bank | Passionate about Emerging Technologies & Building Innovative Solutions | B.Tech CSE @ IIT Palakkad
-          </p>
-          <a
-            href="#contact"
-            class="inline-block bg-primary-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-primary-700 hover:scale-105 transform transition duration-300 shadow-lg hover:shadow-xl"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </header>
+    <link
 
-    <main>
-      <section id="summary" class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-slate-900" data-aos="fade-up">
-            Summary
-          </h2>
-          <p class="text-center text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-            Software Developer with 1.5+ years of experience in developing and
-            maintaining applications. Proven ability to work independently or
-            within a team. Strong problem-solving skills, attention to detail, and
-            a passion for learning emerging technologies. Eager to expand
-            knowledge, skills, and utilise them innovatively to drive company
-            success.
-          </p>
-        </div>
-      </section>
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
 
-      <section id="skills" class="py-20 md:py-28 bg-slate-100">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            Technical Skills
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-code"></i> Programming Languages
-              </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Python</li>
-                <li>C++</li>
-                <li>SQL</li>
-                <li>JavaScript</li>
-              </ul>
-            </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-laptop"></i> Web Development
-              </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Django / DRF</li>
-                <li>Flask</li>
-                <li>HTML / CSS</li>
-                <li>Unix/Linux Environments</li>
-              </ul>
-            </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-database"></i> Databases
-              </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-wrench"></i> Tools & Platforms
-              </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Git / GitHub</li>
-                <li>Jenkins</li>
-                <li>Confluence</li>
-                <li>Hugging Face</li>
-                <li>Grafana</li>
-                <li>Jira / VS Code</li>
-              </ul>
-            </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-cloud"></i> Cloud Technologies
-              </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>AWS (EC2, S3, Lambda, API Gateway, Sagemaker, RDS)</li>
-                <li>Databricks</li>
-              </ul>
-            </div>
-             <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-users"></i> Methodologies & Soft Skills
-              </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Agile Development</li>
-                <li>CI/CD Practices</li>
-                <li>Problem-solving</li>
-                <li>Collaboration</li>
-                <li>Quick Learner</li>
-                <li>Analytical Thinking</li>
-                <li>Continuous Learning</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      rel="stylesheet"
 
-      <section id="experience" class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-briefcase text-primary-600"></i> Professional Experience
-          </h2>
-          <div class="space-y-10 max-w-4xl mx-auto">
-            <article class="p-8 bg-slate-50/50 border border-slate-200 shadow-md rounded-xl" data-aos="fade-up">
-              <header class="mb-4">
-                <h3 class="text-2xl font-semibold text-primary-800">Software Engineer</h3>
-                <p class="text-lg text-slate-700 font-medium">ICICI Bank, Innovation Labs</p>
-                <p class="text-sm text-slate-500">Mumbai, India | Jun 2023 - Present</p>
-              </header>
-              <div class="text-slate-600 space-y-3 leading-relaxed">
-                 <p><strong class="font-medium text-slate-700">Key Contributions:</strong></p>
-                 <ul class="list-disc list-outside ml-5 space-y-2">
-                    <li>Led development of a middleware-based custom session timeout feature, enhancing system security (30% reduction in security incidents).</li>
-                    <li>Designed and implemented an API Gateway with AWS Lambda-based authentication, improving access control (100% reduction in unauthorized access attempts).</li>
-                    <li>Developed an automated data purging solution, optimizing database performance (25% storage reduction, 20% faster query responses, monitored via Grafana).</li>
-                    <li>Collaborated cross-functionally on POCs: graphRAG application, financial chatbot, crop yield estimation.</li>
-                    <li>Actively participated in design/code reviews, testing, debugging, documentation, and CI/CD pipeline utilization within an Agile framework.</li>
-                 </ul>
-                 <p class="mt-3 text-sm font-medium text-slate-500">
-                   <span class="font-semibold">Technologies:</span> Python, Django, DRF, Flask, Git, AWS (Lambda, API Gateway, etc.), PostgreSQL, MongoDB, Grafana, Jenkins
-                 </p>
-              </div>
-            </article>
-            <article class="p-8 bg-slate-50/50 border border-slate-200 shadow-md rounded-xl" data-aos="fade-up">
-              <header class="mb-4">
-                 <h3 class="text-2xl font-semibold text-primary-800">Software Development Intern</h3>
-                 <p class="text-lg text-slate-700 font-medium">Kramah Software India Pvt Ltd</p>
-                 <p class="text-sm text-slate-500">Remote | May 2022 - Jul 2022</p>
-              </header>
-              <div class="text-slate-600 space-y-3 leading-relaxed">
-                 <p><strong class="font-medium text-slate-700">Key Contributions:</strong></p>
-                 <ul class="list-disc list-outside ml-5 space-y-2">
-                    <li>Upgraded a university website by enhancing the UI and fixing functionality issues, resulting in a 30% increase in user engagement and a smoother user experience</li>
-                    <li>Successfully triaged and resolved over 50+ reported bugs in both development and production environment through effective debugging and troubleshooting.</li>
-                    <li>Refactored legacy code into reusable modules, shrinking the codebase size by 40% and improving maintainability, enabling quicker feature development and easier debugging.</li>
-                 </ul>
-                  <p class="mt-3 text-sm font-medium text-slate-500">
-                   <span class="font-semibold">Technologies:</span> Bootstrap, HTML, PHP, SQL
-                 </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+    />
 
-      <section id="projects" class="py-20 md:py-28 bg-slate-100">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-puzzle text-primary-600"></i> Personal Projects
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Financial Chatbot</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
-                Designed and implemented a chatbot prototype using Python, Langchain, and LLMs to answer customer queries and provide financial insights. Integrated APIs with an open LLM model to process user queries and generate relevant, API-based responses. Explored knowledge graph integration possibilities.
-              </p>
-              <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> Python, Langchain, LLM, Knowledge Graph
-              </p>
-              </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Banking Database Management</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
-                Designed a comprehensive banking system database using SQL, including ER diagrams, tables, and constraints. Implemented procedures, functions, and triggers for core operations. Developed a role-based access control system (Manager, Officer, Customer). Created optimized indices and views, reducing query execution time by 30%.
-              </p>
-               <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> SQL, Database Design, Optimization, RBAC
-              </p>
-              <a href="https://github.com/Viper678/Banking-Database" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-800 font-medium inline-flex items-center">
-                View on GitHub <i class="lucide lucide-github ml-1 text-sm"></i>
-              </a>
-            </div>
-             <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Parameterized Algorithms: Vertex Cover</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
-                Conducted research on the Vertex Cover problem within a project on parameterized algorithms for NP-hard problems. Implemented naive, branching, and C(n,k) algorithms. Applied kernelization techniques (e.g., LP-based kernels) to reduce problem size and evaluated performance on benchmark instances.
-              </p>
-               <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> Algorithms, C++, NP-Hard Problems, Kernelization
-              </p>
-              <a href="https://github.com/Viper678/Vertex-Cover" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-800 font-medium inline-flex items-center">
-                 View on GitHub <i class="lucide lucide-github ml-1 text-sm"></i>
-              </a>
-            </div>
-             <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Face Recognition App</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
-                Developed a face recognition app using the `face_recognition` library for real-time detection. Implemented a k-d tree algorithm for optimized matching against a dataset. Used MongoDB for storing recognized faces and attendance logs, enabling automated attendance marking.
-              </p>
-               <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> Python, face_recognition, k-d tree, MongoDB, OpenCV
-              </p>
-              <a href="https://github.com/Viper678/Face-Recognition-App" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-800 font-medium inline-flex items-center">
-                 View on GitHub <i class="lucide lucide-github ml-1 text-sm"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <link
 
-      <section id="education" class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-graduation-cap text-primary-600"></i> Education
-          </h2>
-          <div class="max-w-3xl mx-auto bg-slate-50/50 p-8 shadow-md rounded-xl border border-slate-200" data-aos="fade-up">
-            <h3 class="text-2xl font-semibold text-primary-800">B.Tech in Computer Science and Engineering</h3>
-            <p class="text-lg text-slate-700 font-medium mb-1">Indian Institute of Technology (IIT), Palakkad</p>
-            <p class="text-sm text-slate-500 mb-4">Aug 2019 - May 2023</p>
-            <p class="text-slate-600 mb-3"><strong class="font-medium text-slate-700">Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Artificial Intelligence, Database Management Systems, Computer Networking, Computer Vision, Natural Language Processing.</p>
-            <p class="text-slate-600"><strong class="font-medium text-slate-700">Term Project:</strong> Parameterized Algorithms and Experiments (Focused on Vertex Cover - see Projects section).</p>
-          </div>
-        </div>
-      </section>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
 
-       <section id="achievements" class="py-20 md:py-28 bg-slate-100">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-award text-primary-600"></i> Achievements
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-center">
-            <div class="bg-white p-8 shadow-lg rounded-xl" data-aos="fade-up">
-              <p class="text-xl font-semibold text-primary-700 mb-2">JEE Advanced 2019</p>
-              <p class="text-2xl md:text-3xl font-bold text-slate-800">AIR 3,787</p>
-              <p class="text-slate-500 mt-1">(Top 2.9% of 130,000+ students)</p>
-            </div>
-            <div class="bg-white p-8 shadow-lg rounded-xl" data-aos="fade-up" data-aos-delay="100">
-              <p class="text-xl font-semibold text-primary-700 mb-2">JEE Mains 2019</p>
-              <p class="text-2xl md:text-3xl font-bold text-slate-800">AIR 5,484</p>
-              <p class="text-slate-500 mt-1">(Top 0.34% of 1.6 million students)</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      rel="stylesheet"
 
-      <section id="extracurricular" class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div data-aos="fade-right">
-              <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900">
-                 Extracurricular
-              </h2>
-              <div class="space-y-6">
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Hackathon Participation</p>
-                  <p class="text-slate-600">
-                    Participated in an ICICI Bank hackathon, building a prototype system for central KYC using Django and face matching techniques for identity verification.
-                  </p>
-                </div>
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Mentorship</p>
-                  <p class="text-slate-600">
-                    Provided mentorship and guidance to junior team members, fostering knowledge sharing and technical growth within the team.
-                  </p>
-                </div>
-              </div>
-            </div>
+    />
 
-            <div data-aos="fade-left" id="hobbies">
-               <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900">
-                 <i class="lucide lucide-gamepad-2 text-primary-600"></i> Hobbies & Interests
-              </h2>
-               <div class="space-y-6">
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Emerging Technologies</p>
-                  <p class="text-slate-600">
-                    Enthusiastic about staying updated on cutting-edge tech like AI, Quantum Computing, and Web3.
-                  </p>
-                </div>
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Astrophysics</p>
-                  <p class="text-slate-600">
-                    Fascinated by the mysteries of the universe, regularly exploring scientific literature and space exploration news.
-                  </p>
-                </div>
-                 <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Sports & Reading</p>
-                  <p class="text-slate-600">
-                    Enjoy playing Cricket and Table Tennis. Avid reader of Novels and Manga.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <link
 
-      <section id="contact" class="py-20 md:py-28 bg-slate-100">
-        <div class="container mx-auto px-6 lg:px-8 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-contact text-primary-600"></i> Get In Touch
-          </h2>
-          <p class="mb-10 text-lg text-slate-600 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-            Interested in collaborating or have any questions? Feel free to reach out!
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 text-lg" data-aos="fade-up" data-aos-delay="200">
-            <a
-              href="mailto:mohammedabdulazeem821@gmail.com"
-              class="inline-flex items-center text-primary-600 hover:text-primary-800 hover:underline transition-colors font-medium"
-            >
-              <i class="lucide lucide-mail"></i> mohammedabdulazeem821@gmail.com
-            </a>
-             <span class="hidden sm:inline text-slate-400">|</span>
-            <a
-              href="https://www.linkedin.com/in/mohammed-abdul-azeem-857104192/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center text-primary-600 hover:text-primary-800 hover:underline transition-colors font-medium"
-            >
-              <i class="lucide lucide-linkedin"></i> LinkedIn
-            </a>
-             <span class="hidden sm:inline text-slate-400">|</span>
-            <a
-              href="https://github.com/Viper678"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center text-primary-600 hover:text-primary-800 hover:underline transition-colors font-medium"
-            >
-              <i class="lucide lucide-github"></i> GitHub
-            </a>
-          </div>
-           </div>
-      </section>
-    </main>
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
 
-    <footer class="bg-slate-900 text-slate-400 py-6">
-      <div class="container mx-auto text-center text-sm">
-        <p>&copy; 2024 Mohammed Abdul Azeem. All rights reserved.</p>
-         <p class="mt-1">Built with Tailwind CSS & Lucide Icons.</p>
-      </div>
-    </footer>
+      rel="stylesheet"
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init({
-          once: true, // Whether animation should happen only once - while scrolling down
-          duration: 600, // values from 0 to 3000, with step 50ms
-          easing: 'ease-in-out', // default easing for AOS animations
-      });
+    />
 
-      // Mobile Menu Toggle
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = menuBtn.querySelector('i');
+    <link rel="stylesheet" href="styles.css" />
 
-      menuBtn.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('hidden');
-        if (isOpen) {
-            menuIcon.classList.remove('lucide-menu');
-            menuIcon.classList.add('lucide-x');
-        } else {
-             menuIcon.classList.remove('lucide-x');
-             menuIcon.classList.add('lucide-menu');
-        }
-      });
+  </head>
 
-      // Close mobile menu when a link is clicked
-      const mobileLinks = mobileMenu.querySelectorAll('a');
-      mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-              mobileMenu.classList.add('hidden');
-              menuIcon.classList.remove('lucide-x');
-              menuIcon.classList.add('lucide-menu');
-          });
-      });
+  <body class="bg-gray-100 text-gray-900">
 
-      // Optional: Change navbar background on scroll
-      const navbar = document.getElementById('navbar');
-      window.addEventListener('scroll', () => {
-          if (window.scrollY > 50) {
-              navbar.classList.add('bg-slate-900'); // More opaque background
-              navbar.classList.remove('bg-slate-900/70');
-          } else {
-              navbar.classList.remove('bg-slate-900');
-              navbar.classList.add('bg-slate-900/70'); // Semi-transparent background
-          }
-      });
+    <!-- Navbar -->
 
-    </script>
-  </body>
+    <nav class="bg-gray-800 p-4 shadow-md sticky top-0 z-50">
+
+      <div class="container mx-auto flex justify-between items-center">
+
+        <a href="#" class="text-white text-lg font-bold">Portfolio</a>
+
+        <div class="hidden md:flex space-x-4">
+
+          <a href="#summary" class="text-gray-300 hover:text-white">Summary</a>
+
+          <a href="#skills" class="text-gray-300 hover:text-white">Skills</a>
+
+          <a href="#experience" class="text-gray-300 hover:text-white"
+
+            >Experience</a
+
+          >
+
+          <a href="#projects" class="text-gray-300 hover:text-white"
+
+            >Projects</a
+
+          >
+
+          <a href="#education" class="text-gray-300 hover:text-white"
+
+            >Education</a
+
+          >
+
+          <a href="#test-scores" class="text-gray-300 hover:text-white"
+
+            >Test Scores</a
+
+          >
+
+          <a href="#extracurricular" class="text-gray-300 hover:text-white"
+
+            >Extracurricular</a
+
+          >
+
+          <a href="#hobbies" class="text-gray-300 hover:text-white">Hobbies</a>
+
+          <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+
+
+    <!-- Hero Section -->
+
+    <!-- Hero Section -->
+
+    <header
+
+      class="relative bg-cover bg-center h-screen flex items-center"
+
+      style="
+
+        background-image: url('https://source.unsplash.com/1600x900/?coding,tech');
+
+      "
+
+    >
+
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <div class="relative z-10 container mx-auto text-center px-4">
+
+        <div
+
+          class="max-w-2xl mx-auto py-16 px-6 bg-white bg-opacity-70 rounded-lg shadow-lg"
+
+        >
+
+          <h1 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-down">
+
+            Mohammed Abdul Azeem
+
+          </h1>
+
+          <p class="text-base md:text-lg mb-6" data-aos="fade-up">
+
+            Software Developement Engineer @ Innovations Labs, ICICI Bank | Passionate about Emerging Technologies | B.Tech in Computer Science and Engineering @ IIT Palakkad
+
+          </p>
+
+          <a
+
+            href="#contact"
+
+            class="bg-blue-500 text-white py-2 px-6 rounded-full text-base font-semibold hover:bg-blue-600 transition duration-300"
+
+          >
+
+            Get in Touch
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- Summary Section -->
+
+    <section id="summary" class="py-16 bg-white">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+
+          Summary
+
+        </h2>
+
+        <p class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+
+          Software Developer with 1 year of experience in developing and
+
+          maintaining applications. Proven ability to work independently or
+
+          within a team. Strong problem-solving skills, attention to detail, and
+
+          a passion for learning emerging technologies.Eager to expand
+
+          knowledge, skills, and utilise them innovatively to drive company
+
+          success.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Skills Section -->
+
+    <section id="skills" class="py-16 bg-gray-100">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+
+          Skills
+
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="zoom-in">
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <h4 class="text-xl font-semibold mb-4">
+
+              <i class="fas fa-code"></i> Programming Languages
+
+            </h4>
+
+            <ul>
+
+              <li>Python</li>
+
+              <li>C++</li>
+
+              <li>SQL</li>
+
+              <li>JavaScript</li>
+
+            </ul>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <h4 class="text-xl font-semibold mb-4">
+
+              <i class="fas fa-laptop-code"></i> Development
+
+            </h4>
+
+            <ul>
+
+              <li>Django</li>
+
+              <li>Flask</li>
+
+              <li>DRF</li>
+
+              <li>Unix/Linux</li>
+
+            </ul>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <h4 class="text-xl font-semibold mb-4">
+
+              <i class="fas fa-database"></i> Databases
+
+            </h4>
+
+            <ul>
+
+              <li>PostgreSQL</li>
+
+              <li>MongoDB</li>
+
+            </ul>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <h4 class="text-xl font-semibold mb-4">
+
+              <i class="fas fa-tools"></i> Tools and Platforms
+
+            </h4>
+
+            <ul>
+
+              <li>Git/GitHub</li>
+
+              <li>Jenkins</li>
+
+              <li>VS Code</li>
+
+              <li>Jira</li>
+
+              <li>Confluence</li>
+
+            </ul>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <h4 class="text-xl font-semibold mb-4">
+
+              <i class="fas fa-cogs"></i> Software Engineering
+
+            </h4>
+
+            <ul>
+
+              <li>Code Review</li>
+
+              <li>Code Quality</li>
+
+              <li>Testing</li>
+
+              <li>Debugging</li>
+
+              <li>CI/CD</li>
+
+            </ul>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <h4 class="text-xl font-semibold mb-4">
+
+              <i class="fas fa-cloud"></i> Cloud
+
+            </h4>
+
+            <ul>
+
+              <li>AWS (EC2, S3, Lambda, API Gateway, SageMaker)</li>
+
+              <li>Databricks</li>
+
+            </ul>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <h4 class="text-xl font-semibold mb-4">
+
+              <i class="fas fa-user-friends"></i> Soft Skills
+
+            </h4>
+
+            <ul>
+
+              <li>Problem-solving</li>
+
+              <li>Quick Learner</li>
+
+              <li>Analytical Thinking</li>
+
+              <li>Collaboration</li>
+
+              <li>Continuous Learning</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Experience Section -->
+
+    <section id="experience" class="py-16 bg-white">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+
+          Professional Experience
+
+        </h2>
+
+        <div class="space-y-8">
+
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+
+            <h4 class="text-xl font-semibold">
+
+              Software Engineer at Innovation Labs, ICICI (Jun'23 - Present)
+
+            </h4>
+
+            <p>
+
+              Tools & Technologies: Python, Django, DRF, Flask, Git, AWS, PostgreSQL,
+
+              MongoDB, VS Code
+
+            </p>
+
+            <ul class="list-disc list-inside mt-2">
+
+              <li>
+
+                Developed an automated inactivity-based logout feature, enhancing system security and mitigating unauthorised access risks, leading to a 30% reduction in security incidents.
+
+              </li>
+
+              <li>
+
+                Created an API Gateway for an application using AWS Lambda-based authentication, improving security and access control, which resulted in a 100% decrease in unauthorised access attempts.
+
+              </li>
+
+              <li>
+
+                Developed a data management solution by automating data purging, optimizing database performance,
+
+cutting down storage usage by 25%, and improving query response times by 20%.
+
+              </li>
+
+              <li>
+
+                Collaborated with cross-functional teams and stakeholders to build and deploy proof-of-concepts (POCs)
+
+for potential use cases, including construction monitoring and crop yield estimation.
+
+              </li>
+
+              <li>
+
+                Participated in design and code reviews, implementing best practices for testing, debugging, and
+
+documentation, while utilizing CI/CD pipelines to streamline the SDLC.
+
+              </li>
+
+              <li>
+
+                Actively contributed in an Agile environment and embraced continuous learning to ensure efficient and
+
+reliable software delivery.
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+
+            <h4 class="text-xl font-semibold">
+
+              Software Development Intern at Kramah Software India Pvt Ltd
+
+              (May'22 - Jul'22)
+
+            </h4>
+
+            <p>Tools & Technologies: Bootstrap, HTML, PHP, SQL</p>
+
+            <ul class="list-disc list-inside mt-2">
+
+              <li>
+
+                Upgraded a university website by enhancing the UI and fixing functionality issues, resulting in a 30%
+
+increase in user engagement and a smoother user experience.
+
+              </li>
+
+              <li>
+
+                Successfully triaged and resolved over 50+ reported bugs in both development and production
+
+environment through effective debugging and troubleshooting.
+
+              </li>
+
+              <li>
+
+                Refactored legacy code, creating reusable modules and reducing
+
+                codebase size by 40%.
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Projects Section -->
+
+    <section id="projects" class="py-16 bg-gray-100">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+
+          Personal Projects
+
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <a
+
+            href="https://github.com/Viper678/Face-Recognition-App"
+
+            target="_blank, class="text-blue-500"
+
+          >
+
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+
+              <h4 class="text-xl font-semibold mb-4">Face Recognition App</h4>
+
+              <p>
+
+                Developed a face recognition application using the face
+
+                recognition library for real-time facial detection and
+
+                recognition. Implemented a k-dimensional tree (k-d tree)
+
+                algorithm to optimize and identify the closest matching face
+
+                from a dataset. Integrated MongoDB for efficient data storage,
+
+                including recognized faces and attendance logs. Deployed the
+
+                system to mark attendance automatically, improving accuracy and
+
+                speed in comparison to manual methods.
+
+              </p>
+
+            </div>
+
+          </a>
+
+          <a
+
+            href="https://github.com/Viper678/Banking-Database"
+
+            target="_blank, class="text-blue-500"
+
+          >
+
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+
+              <h4 class="text-xl font-semibold mb-4">
+
+                Banking Database Management
+
+              </h4>
+
+              <p>
+
+                Designed a comprehensive banking system database with ER
+
+                diagrams, tables, and constraints. Implemented procedures,
+
+                functions, and triggers for core banking operations. Implemented
+
+                a role-based access control system with three main roles
+
+                (Manager, Officer, and Customer), each with specific privileges
+
+                and access levels to the database. Created optimized indices and
+
+                views, reducing query execution time by 30% and streamlining
+
+                data access for different user roles.
+
+              </p>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Education Section -->
+
+    <section id="education" class="py-16 bg-white">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+
+          Education
+
+        </h2>
+
+        <div class="space-y-8">
+
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+
+            <h4 class="text-xl font-semibold">
+
+              B.Tech in Computer Science and Engineering, IIT Palakkad (Aug'19 -
+
+              May'23)
+
+            </h4>
+
+            <p>
+
+              Relevant Coursework: Data Structures and Algorithms, Operating
+
+              Systems, Database Management Systems, Computer Networks, Computer
+
+              Vision, Natural Language Processing
+
+            </p>
+
+            <p>
+
+              <a
+
+                href="https://github.com/Viper678/Vertex-Cover"
+
+                target="_blank"
+
+                class="text-blue-500"
+
+                >Term Project: Parameterized Algorithms and Experiments</a
+
+              >
+
+            </p>
+
+            <ul class="list-disc list-inside mt-2">
+
+              <li>
+
+                Conducted in-depth research on the Vertex Cover problem as part
+
+                of a larger project focused on parameterized algorithms and
+
+                their applications to NP-hard problems.
+
+              </li>
+
+              <li>
+
+                Implemented various approaches, including naive, branching, and
+
+                C(n,k) algorithms, and applied kernelization techniques such as
+
+                LP-based kernels to reduce problem size.
+
+              </li>
+
+              <li>
+
+                Evaluated the performance of these algorithms on benchmark
+
+                instances, comparing results pre- and post-kernelization to
+
+                optimize runtime.
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="p-6 bg-gray-50 shadow-md rounded-lg" data-aos="fade-up">
+
+            <h4 class="text-xl font-semibold">
+
+              Intermediate Education, HIE (May'17 - May'19)
+
+            </h4>
+
+            <p>Courses: Math, Physics, Chemistry</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Test Scores Section -->
+
+    <section id="test-scores" class="py-16 bg-gray-100">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+
+          Test Scores
+
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">JEE Advanced</p>
+
+            <p class="text-xl">AIR 3,787</p>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">JEE Mains</p>
+
+            <p class="text-xl">AIR 5,484</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Extracurricular Section -->
+
+    <section id="extracurricular" class="py-16 bg-white">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-right">
+
+          Extracurricular
+
+        </h2>
+
+        <div class="space-y-4 text-center">
+
+          <div class="bg-gray-50 p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">Hackathon Participation</p>
+
+            <p>
+
+              Participated in a hackathon where we built a prototype system for
+
+              central KYC using Django and face matching techniques for identity
+
+              verification.
+
+            </p>
+
+          </div>
+
+          <div class="bg-gray-50 p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">Mentorship</p>
+
+            <p>
+
+              Provided mentorship and guidance to junior team members, fostering
+
+              knowledge sharing and technical growth within the team.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Hobbies Section -->
+
+    <section id="hobbies" class="py-16 bg-gray-100">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+
+          Hobbies and Interests
+
+        </h2>
+
+        <div class="space-y-4 text-center">
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">Emerging Technologies</p>
+
+            <p>
+
+              Enthusiastic about staying updated on cutting-edge technologies
+
+              like AI and quantum computing.
+
+            </p>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">Astrophysics</p>
+
+            <p>
+
+              Fascinated by the mysteries of the universe, regularly exploring
+
+              scientific literature and developments in space exploration.
+
+            </p>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">Sports</p>
+
+            <p>Cricket, Table Tennis</p>
+
+          </div>
+
+          <div class="bg-white p-6 shadow-lg rounded-lg">
+
+            <p class="text-lg font-semibold">Reading</p>
+
+            <p>Novels, Manga</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="py-16 bg-gray-100">
+
+      <div class="container mx-auto px-4">
+
+        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-left">
+
+          Contact
+
+        </h2>
+
+        <div class="flex flex-col items-center">
+
+          <p class="mb-4 text-lg">
+
+            Feel free to reach out to me through any of the following:
+
+          </p>
+
+          <ul class="space-y-4 text-lg">
+
+            <li>
+
+              <a
+
+                href="mailto:mohammedabdulazeem821@gmail.com"
+
+                class="text-blue-500 hover:underline"
+
+                >mohammedabdulazeem821@gmail.com</a
+
+              >
+
+            </li>
+
+            <li>
+
+              <a
+
+                href="https://www.linkedin.com/in/mohammed-abdul-azeem-857104192/"
+
+                target="_blank"
+
+                class="text-blue-500 hover:underline"
+
+                >LinkedIn</a
+
+              >
+
+            </li>
+
+            <li>
+
+              <a
+
+                href="https://github.com/Viper678"
+
+                target="_blank"
+
+                class="text-blue-500 hover:underline"
+
+                >GitHub</a
+
+              >
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-800 text-white py-4">
+
+      <div class="container mx-auto text-center">
+
+        <p>&copy; 2024 Mohammed Abdul Azeem. All rights reserved.</p>
+
+      </div>
+
+    </footer>
+
+
+
+    <!-- AOS Library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+
+      AOS.init();
+
+    </script>
+
+  </body>
+
 </html>
