@@ -10,40 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-      @font-face {
-        font-family: 'LucideIcons';
-        src: url('https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf') format('truetype');
-      }
-      .lucide {
-        font-family: 'LucideIcons';
-        font-size: 1.25rem; /* Adjust size as needed */
-        line-height: 1;
-        vertical-align: middle;
-        margin-right: 0.5rem; /* Space between icon and text */
-      }
-      /* Add specific icon content using ::before pseudo-element */
-      .lucide-code::before { content: '\e132'; }
-      .lucide-laptop::before { content: '\e34f'; }
-      .lucide-database::before { content: '\e14e'; }
-      .lucide-wrench::before { content: '\e533'; }
-      .lucide-cloud::before { content: '\e118'; }
-      .lucide-users::before { content: '\e51e'; }
-      .lucide-mail::before { content: '\e37b'; }
-      .lucide-linkedin::before { content: '\e355'; }
-      .lucide-github::before { content: '\e2e8'; }
-      .lucide-briefcase::before { content: '\e0d8'; }
-      .lucide-graduation-cap::before { content: '\e2f6'; }
-      .lucide-award::before { content: '\e081'; }
-      .lucide-puzzle::before { content: '\e41c'; }
-      .lucide-gamepad-2::before { content: '\e2e3'; }
-      .lucide-contact::before { content: '\e13a'; }
-      .lucide-menu::before { content: '\e384'; }
-      .lucide-x::before { content: '\e534'; }
-      .lucide-link::before { content: '\e354'; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
 
@@ -55,31 +22,74 @@
               sans: ['Inter', 'sans-serif'],
             },
             colors: {
-              primary: { // Example primary color palette
-                DEFAULT: '#4f46e5', // indigo-600
+              primary: { // Refined primary color palette (Indigo)
+                DEFAULT: '#4f46e5',
                 '50': '#eef2ff',
                 '100': '#e0e7ff',
                 '200': '#c7d2fe',
                 '300': '#a5b4fc',
                 '400': '#818cf8',
                 '500': '#6366f1',
-                '600': '#4f46e5',
+                '600': '#4f46e5', // Default
                 '700': '#4338ca',
                 '800': '#3730a3',
                 '900': '#312e81',
                 '950': '#1e1b4b',
               },
+              slate: { // Using Tailwind's default slate for consistency
+                '50': '#f8fafc',
+                '100': '#f1f5f9',
+                '200': '#e2e8f0',
+                '300': '#cbd5e1',
+                '400': '#94a3b8',
+                '500': '#64748b',
+                '600': '#475569',
+                '700': '#334155',
+                '800': '#1e293b',
+                '900': '#0f172a', // Dark background color
+              }
+            },
+            backgroundImage: {
+              'hero-pattern': "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')",
+            },
+            boxShadow: {
+              'subtle': '0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03)',
+              'hover': '0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.07)',
             }
           }
         }
       }
     </script>
+    <style>
+      /* Style for subtle section dividers */
+      .section-divider {
+        position: relative;
+        height: 80px; /* Adjust height */
+        overflow: hidden;
+      }
+      .section-divider::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: inherit; /* Inherit background from parent section */
+        transform: skewY(-2deg); /* Adjust angle */
+        transform-origin: top left;
+        z-index: 1;
+      }
+       /* Ensure content below divider is visible */
+      main section {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
   </head>
-  <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+  <body class="bg-slate-100 text-slate-700 font-sans antialiased">
 
-    <nav class="bg-slate-900/70 backdrop-blur-md text-white p-4 shadow-lg sticky top-0 z-50 transition-all duration-300" id="navbar">
+    <nav class="bg-slate-900/80 backdrop-blur-lg text-white p-4 shadow-md sticky top-0 z-50 transition-all duration-300 border-b border-slate-700/50" id="navbar">
       <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-xl font-bold tracking-tight hover:text-primary-300 transition-colors">MAA Portfolio</a>
+        <a href="#" class="text-xl font-bold tracking-tight text-white hover:text-primary-300 transition-colors">MAA Portfolio</a>
         <div class="hidden md:flex space-x-6 items-center">
           <a href="#summary" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Summary</a>
           <a href="#skills" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Skills</a>
@@ -89,48 +99,52 @@
           <a href="#achievements" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Achievements</a>
           <a href="#extracurricular" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Extracurricular</a>
           <a href="#hobbies" class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Hobbies</a>
-          <a href="#contact" class="bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 shadow-md hover:shadow-lg">
+          <a href="#contact" class="bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-full text-sm font-semibold transition duration-300 shadow hover:shadow-lg transform hover:-translate-y-px">
             Contact
           </a>
         </div>
         <div class="md:hidden">
-          <button id="menu-btn" class="text-white focus:outline-none">
-            <i class="lucide lucide-menu text-2xl"></i>
+          <button id="menu-btn" class="text-white focus:outline-none p-1">
+             <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+             <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
           </button>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-        <a href="#summary" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Summary</a>
-        <a href="#skills" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Skills</a>
-        <a href="#experience" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Experience</a>
-        <a href="#projects" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Projects</a>
-        <a href="#education" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Education</a>
-        <a href="#achievements" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Achievements</a>
-        <a href="#extracurricular" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Extracurricular</a>
-        <a href="#hobbies" class="block text-slate-300 hover:text-white transition-colors px-2 py-1 rounded">Hobbies</a>
-        <a href="#contact" class="block bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-full font-semibold transition duration-300 shadow-md hover:shadow-lg mt-2">
+      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2 border-t border-slate-700/50 pt-4">
+        <a href="#summary" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Summary</a>
+        <a href="#skills" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Skills</a>
+        <a href="#experience" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Experience</a>
+        <a href="#projects" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Projects</a>
+        <a href="#education" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Education</a>
+        <a href="#achievements" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Achievements</a>
+        <a href="#extracurricular" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Extracurricular</a>
+        <a href="#hobbies" class="block text-slate-300 hover:text-white transition-colors px-3 py-2 rounded hover:bg-slate-700/50">Hobbies</a>
+        <a href="#contact" class="block bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-full font-semibold transition duration-300 shadow hover:shadow-lg mt-2">
           Contact
         </a>
       </div>
     </nav>
 
     <header
-      class="relative bg-cover bg-center min-h-screen flex items-center justify-center py-20 px-4"
-      style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');"
-      onerror="this.onerror=null; this.style.backgroundImage='url(https://placehold.co/1600x900/333333/cccccc?text=Tech+Background)'"
+      class="relative bg-hero-pattern bg-cover bg-center min-h-screen flex items-center justify-center py-24 px-4 overflow-hidden"
+      onerror="this.onerror=null; this.style.backgroundImage='url(https://placehold.co/1600x900/1e293b/94a3b8?text=Tech+Background)'; this.style.backgroundColor='#1e293b';"
     >
-      <div class="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/80"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-primary-950/70"></div>
+      <div class="absolute inset-0 z-0 opacity-10">
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-primary-500 rounded-full filter blur-2xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 bg-primary-700 rounded-lg filter blur-3xl animate-pulse animation-delay-400"></div>
+       </div>
       <div class="relative z-10 container mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
-        <div class="max-w-3xl mx-auto py-16 px-8 bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-md">
+        <div class="max-w-3xl mx-auto py-16 px-8 bg-white/5 backdrop-blur-xl rounded-2xl shadow-xl border border-white/10">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-5 text-white leading-tight" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
             Mohammed Abdul Azeem
           </h1>
-          <p class="text-lg md:text-xl mb-8 text-slate-200 drop-shadow-sm max-w-2xl mx-auto">
+          <p class="text-lg md:text-xl mb-10 text-slate-200 max-w-2xl mx-auto leading-relaxed">
             Software Engineer @ ICICI Bank | Passionate about Emerging Technologies & Building Innovative Solutions | B.Tech CSE @ IIT Palakkad
           </p>
           <a
             href="#contact"
-            class="inline-block bg-primary-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-primary-700 hover:scale-105 transform transition duration-300 shadow-lg hover:shadow-xl"
+            class="inline-block bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:from-primary-600 hover:to-primary-700 hover:scale-105 transform transition duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-slate-900"
           >
             Get in Touch
           </a>
@@ -139,140 +153,146 @@
     </header>
 
     <main>
-      <section id="summary" class="py-20 md:py-28 bg-white">
+      <section id="summary" class="py-24 md:py-32 bg-white">
         <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center text-slate-900" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
             Summary
           </h2>
           <p class="text-center text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-            Software Developer with 1.5+ years of experience in developing and
-            maintaining applications. Proven ability to work independently or
-            within a team. Strong problem-solving skills, attention to detail, and
-            a passion for learning emerging technologies. Eager to expand
-            knowledge, skills, and utilise them innovatively to drive company
-            success.
+             Results-driven Software Engineer with 1+ year of experience at ICICI Bank's Innovation Labs, specializing in Python, Django, AWS, and database management. Proven ability to lead security enhancements, optimize system performance, and collaborate on innovative POCs like financial chatbots and graphRAG applications. Graduated with a B.Tech in Computer Science from IIT Palakkad. Passionate about leveraging technology to solve complex problems and drive impactful results. Eager to contribute expertise in software development, cloud technologies, and emerging tech to a challenging new role.
           </p>
         </div>
       </section>
 
-      <section id="skills" class="py-20 md:py-28 bg-slate-100">
+      <div class="section-divider bg-white"></div>
+
+      <section id="skills" class="py-24 md:py-32 bg-slate-50">
         <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900" data-aos="fade-up">
             Technical Skills
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="100">
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-code"></i> Programming Languages
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+             <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300">
+              <h4 class="text-xl font-semibold mb-5 flex items-center text-primary-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-primary-500"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Programming Languages
               </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Python</li>
-                <li>C++</li>
-                <li>SQL</li>
-                <li>JavaScript</li>
+              <ul class="space-y-2.5 text-slate-600">
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Python</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>C++</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>SQL</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>JavaScript</li>
               </ul>
             </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-laptop"></i> Web Development
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300">
+              <h4 class="text-xl font-semibold mb-5 flex items-center text-primary-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-primary-500"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></svg>
+                Web Development
               </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Django / DRF</li>
-                <li>Flask</li>
-                <li>HTML / CSS</li>
-                <li>Unix/Linux Environments</li>
+              <ul class="space-y-2.5 text-slate-600">
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Django / DRF</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Flask</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>HTML / CSS</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Unix/Linux Environments</li>
               </ul>
             </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-database"></i> Databases
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300">
+              <h4 class="text-xl font-semibold mb-5 flex items-center text-primary-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-primary-500"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                Databases
               </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
+              <ul class="space-y-2.5 text-slate-600">
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>PostgreSQL</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>MongoDB</li>
               </ul>
             </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-wrench"></i> Tools & Platforms
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300">
+              <h4 class="text-xl font-semibold mb-5 flex items-center text-primary-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-primary-500"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                Tools & Platforms
               </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Git / GitHub</li>
-                <li>Jenkins</li>
-                <li>Confluence</li>
-                <li>Hugging Face</li>
-                <li>Grafana</li>
-                <li>Jira / VS Code</li>
+              <ul class="space-y-2.5 text-slate-600">
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Git / GitHub</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Jenkins</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Confluence</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Hugging Face</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Grafana</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Jira / VS Code</li>
               </ul>
             </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-cloud"></i> Cloud Technologies
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300">
+              <h4 class="text-xl font-semibold mb-5 flex items-center text-primary-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-primary-500"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                Cloud Technologies
               </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>AWS (EC2, S3, Lambda, API Gateway, Sagemaker, RDS)</li>
-                <li>Databricks</li>
+              <ul class="space-y-2.5 text-slate-600">
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>AWS (EC2, S3, Lambda, API Gateway, Sagemaker, RDS)</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Databricks</li>
               </ul>
             </div>
-             <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <h4 class="text-xl font-semibold mb-4 flex items-center text-primary-700">
-                <i class="lucide lucide-users"></i> Methodologies & Soft Skills
+             <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300">
+              <h4 class="text-xl font-semibold mb-5 flex items-center text-primary-700">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-primary-500"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Methodologies & Soft Skills
               </h4>
-              <ul class="space-y-2 text-slate-600">
-                <li>Agile Development</li>
-                <li>CI/CD Practices</li>
-                <li>Problem-solving</li>
-                <li>Collaboration</li>
-                <li>Quick Learner</li>
-                <li>Analytical Thinking</li>
-                <li>Continuous Learning</li>
+              <ul class="space-y-2.5 text-slate-600">
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Agile Development</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>CI/CD Practices</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Problem-solving</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Collaboration</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Quick Learner</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Analytical Thinking</li>
+                <li class="flex items-center"><span class="h-1.5 w-1.5 bg-primary-300 rounded-full mr-2.5"></span>Continuous Learning</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="py-20 md:py-28 bg-white">
+      <div class="section-divider bg-slate-50 rotate-180"></div>
+
+      <section id="experience" class="py-24 md:py-32 bg-white">
         <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-briefcase text-primary-600"></i> Professional Experience
+          <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900 flex items-center justify-center" data-aos="fade-up">
+             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-primary-600"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Professional Experience
           </h2>
-          <div class="space-y-10 max-w-4xl mx-auto">
-            <article class="p-8 bg-slate-50/50 border border-slate-200 shadow-md rounded-xl" data-aos="fade-up">
-              <header class="mb-4">
+          <div class="space-y-12 max-w-4xl mx-auto">
+            <article class="p-8 bg-gradient-to-br from-slate-50 to-slate-100/50 border border-slate-200/60 shadow-lg rounded-xl transition-shadow duration-300 hover:shadow-xl" data-aos="fade-up">
+              <header class="mb-5 border-b border-slate-200 pb-4">
                 <h3 class="text-2xl font-semibold text-primary-800">Software Engineer</h3>
                 <p class="text-lg text-slate-700 font-medium">ICICI Bank, Innovation Labs</p>
                 <p class="text-sm text-slate-500">Mumbai, India | Jun 2023 - Present</p>
               </header>
-              <div class="text-slate-600 space-y-3 leading-relaxed">
-                 <p><strong class="font-medium text-slate-700">Key Contributions:</strong></p>
-                 <ul class="list-disc list-outside ml-5 space-y-2">
+              <div class="text-slate-600 space-y-3.5 leading-relaxed">
+                 <p class="font-medium text-slate-700">Key Contributions:</p>
+                 <ul class="list-disc list-outside ml-5 space-y-2.5 text-slate-600">
                     <li>Led development of a middleware-based custom session timeout feature, enhancing system security (30% reduction in security incidents).</li>
                     <li>Designed and implemented an API Gateway with AWS Lambda-based authentication, improving access control (100% reduction in unauthorized access attempts).</li>
                     <li>Developed an automated data purging solution, optimizing database performance (25% storage reduction, 20% faster query responses, monitored via Grafana).</li>
                     <li>Collaborated cross-functionally on POCs: graphRAG application, financial chatbot, crop yield estimation.</li>
                     <li>Actively participated in design/code reviews, testing, debugging, documentation, and CI/CD pipeline utilization within an Agile framework.</li>
                  </ul>
-                 <p class="mt-3 text-sm font-medium text-slate-500">
-                   <span class="font-semibold">Technologies:</span> Python, Django, DRF, Flask, Git, AWS (Lambda, API Gateway, etc.), PostgreSQL, MongoDB, Grafana, Jenkins
+                 <p class="mt-4 pt-3 border-t border-slate-200/80 text-sm font-medium text-slate-500">
+                   <span class="font-semibold text-slate-600">Technologies:</span> Python, Django, DRF, Flask, Git, AWS (Lambda, API Gateway, etc.), PostgreSQL, MongoDB, Grafana, Jenkins
                  </p>
               </div>
             </article>
-            <article class="p-8 bg-slate-50/50 border border-slate-200 shadow-md rounded-xl" data-aos="fade-up">
-              <header class="mb-4">
+            <article class="p-8 bg-gradient-to-br from-slate-50 to-slate-100/50 border border-slate-200/60 shadow-lg rounded-xl transition-shadow duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+              <header class="mb-5 border-b border-slate-200 pb-4">
                  <h3 class="text-2xl font-semibold text-primary-800">Software Development Intern</h3>
                  <p class="text-lg text-slate-700 font-medium">Kramah Software India Pvt Ltd</p>
                  <p class="text-sm text-slate-500">Remote | May 2022 - Jul 2022</p>
               </header>
-              <div class="text-slate-600 space-y-3 leading-relaxed">
-                 <p><strong class="font-medium text-slate-700">Key Contributions:</strong></p>
-                 <ul class="list-disc list-outside ml-5 space-y-2">
+              <div class="text-slate-600 space-y-3.5 leading-relaxed">
+                 <p class="font-medium text-slate-700">Key Contributions:</p>
+                 <ul class="list-disc list-outside ml-5 space-y-2.5 text-slate-600">
                     <li>Upgraded a university website by enhancing the UI and fixing functionality issues, resulting in a 30% increase in user engagement and a smoother user experience</li>
                     <li>Successfully triaged and resolved over 50+ reported bugs in both development and production environment through effective debugging and troubleshooting.</li>
                     <li>Refactored legacy code into reusable modules, shrinking the codebase size by 40% and improving maintainability, enabling quicker feature development and easier debugging.</li>
                  </ul>
-                  <p class="mt-3 text-sm font-medium text-slate-500">
-                   <span class="font-semibold">Technologies:</span> Bootstrap, HTML, PHP, SQL
+                  <p class="mt-4 pt-3 border-t border-slate-200/80 text-sm font-medium text-slate-500">
+                   <span class="font-semibold text-slate-600">Technologies:</span> Bootstrap, HTML, PHP, SQL
                  </p>
               </div>
             </article>
@@ -280,113 +300,127 @@
         </div>
       </section>
 
-      <section id="projects" class="py-20 md:py-28 bg-slate-100">
+      <div class="section-divider bg-white"></div>
+
+      <section id="projects" class="py-24 md:py-32 bg-slate-50">
         <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-puzzle text-primary-600"></i> Personal Projects
+           <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900 flex items-center justify-center" data-aos="fade-up">
+             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-primary-600"><path d="M19.43 7.75A6.18 6.18 0 1 1 7.75 19.43"/><path d="M16.25 7.75A6.18 6.18 0 1 0 7.75 16.25"/><path d="M19.43 16.25A6.18 6.18 0 1 0 16.25 19.43"/><path d="M16.25 16.25A6.18 6.18 0 1 1 7.75 7.75"/></svg>
+            Personal Projects
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Financial Chatbot</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col" data-aos="fade-up">
+              <h4 class="text-xl font-semibold mb-4 text-primary-700">Financial Chatbot</h4>
+              <p class="text-slate-600 mb-5 flex-grow leading-relaxed">
                 Designed and implemented a chatbot prototype using Python, Langchain, and LLMs to answer customer queries and provide financial insights. Integrated APIs with an open LLM model to process user queries and generate relevant, API-based responses. Explored knowledge graph integration possibilities.
               </p>
-              <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> Python, Langchain, LLM, Knowledge Graph
+              <p class="text-sm font-medium text-slate-500">
+                <span class="font-semibold text-slate-600">Tech:</span> Python, Langchain, LLM, Knowledge Graph
               </p>
               </div>
-            <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Banking Database Management</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="text-xl font-semibold mb-4 text-primary-700">Banking Database Management</h4>
+              <p class="text-slate-600 mb-5 flex-grow leading-relaxed">
                 Designed a comprehensive banking system database using SQL, including ER diagrams, tables, and constraints. Implemented procedures, functions, and triggers for core operations. Developed a role-based access control system (Manager, Officer, Customer). Created optimized indices and views, reducing query execution time by 30%.
               </p>
-               <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> SQL, Database Design, Optimization, RBAC
+               <p class="text-sm font-medium text-slate-500 mb-4">
+                <span class="font-semibold text-slate-600">Tech:</span> SQL, Database Design, Optimization, RBAC
               </p>
-              <a href="https://github.com/Viper678/Banking-Database" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-800 font-medium inline-flex items-center">
-                View on GitHub <i class="lucide lucide-github ml-1 text-sm"></i>
+              <a href="https://github.com/Viper678/Banking-Database" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-700 font-medium inline-flex items-center group transition-colors duration-200">
+                View on GitHub
+                 <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub Logo" class="w-4 h-4 ml-1.5 transition-transform group-hover:scale-110">
               </a>
             </div>
-             <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Parameterized Algorithms: Vertex Cover</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
+             <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="text-xl font-semibold mb-4 text-primary-700">Parameterized Algorithms: Vertex Cover</h4>
+              <p class="text-slate-600 mb-5 flex-grow leading-relaxed">
                 Conducted research on the Vertex Cover problem within a project on parameterized algorithms for NP-hard problems. Implemented naive, branching, and C(n,k) algorithms. Applied kernelization techniques (e.g., LP-based kernels) to reduce problem size and evaluated performance on benchmark instances.
               </p>
-               <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> Algorithms, C++, NP-Hard Problems, Kernelization
+               <p class="text-sm font-medium text-slate-500 mb-4">
+                <span class="font-semibold text-slate-600">Tech:</span> Algorithms, C++, NP-Hard Problems, Kernelization
               </p>
-              <a href="https://github.com/Viper678/Vertex-Cover" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-800 font-medium inline-flex items-center">
-                 View on GitHub <i class="lucide lucide-github ml-1 text-sm"></i>
+              <a href="https://github.com/Viper678/Vertex-Cover" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-700 font-medium inline-flex items-center group transition-colors duration-200">
+                 View on GitHub
+                 <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub Logo" class="w-4 h-4 ml-1.5 transition-transform group-hover:scale-110">
               </a>
             </div>
-             <div class="bg-white p-6 shadow-lg rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
-              <h4 class="text-xl font-semibold mb-3 text-primary-700">Face Recognition App</h4>
-              <p class="text-slate-600 mb-4 flex-grow">
+             <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+              <h4 class="text-xl font-semibold mb-4 text-primary-700">Face Recognition App</h4>
+              <p class="text-slate-600 mb-5 flex-grow leading-relaxed">
                 Developed a face recognition app using the `face_recognition` library for real-time detection. Implemented a k-d tree algorithm for optimized matching against a dataset. Used MongoDB for storing recognized faces and attendance logs, enabling automated attendance marking.
               </p>
-               <p class="text-sm font-medium text-slate-500 mb-3">
-                <span class="font-semibold">Tech:</span> Python, face_recognition, k-d tree, MongoDB, OpenCV
+               <p class="text-sm font-medium text-slate-500 mb-4">
+                <span class="font-semibold text-slate-600">Tech:</span> Python, face_recognition, k-d tree, MongoDB, OpenCV
               </p>
-              <a href="https://github.com/Viper678/Face-Recognition-App" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-800 font-medium inline-flex items-center">
-                 View on GitHub <i class="lucide lucide-github ml-1 text-sm"></i>
+              <a href="https://github.com/Viper678/Face-Recognition-App" target="_blank" rel="noopener noreferrer" class="mt-auto text-primary-600 hover:text-primary-700 font-medium inline-flex items-center group transition-colors duration-200">
+                 View on GitHub
+                 <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub Logo" class="w-4 h-4 ml-1.5 transition-transform group-hover:scale-110">
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="education" class="py-20 md:py-28 bg-white">
+       <div class="section-divider bg-slate-50 rotate-180"></div>
+
+      <section id="education" class="py-24 md:py-32 bg-white">
         <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-graduation-cap text-primary-600"></i> Education
+          <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900 flex items-center justify-center" data-aos="fade-up">
+             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-primary-600"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.084a1 1 0 0 0 0 1.838l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            Education
           </h2>
-          <div class="max-w-3xl mx-auto bg-slate-50/50 p-8 shadow-md rounded-xl border border-slate-200" data-aos="fade-up">
+          <div class="max-w-3xl mx-auto bg-gradient-to-br from-slate-50 to-slate-100/50 p-8 shadow-lg rounded-xl border border-slate-200/60" data-aos="fade-up">
             <h3 class="text-2xl font-semibold text-primary-800">B.Tech in Computer Science and Engineering</h3>
-            <p class="text-lg text-slate-700 font-medium mb-1">Indian Institute of Technology (IIT), Palakkad</p>
-            <p class="text-sm text-slate-500 mb-4">Aug 2019 - May 2023</p>
-            <p class="text-slate-600 mb-3"><strong class="font-medium text-slate-700">Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Artificial Intelligence, Database Management Systems, Computer Networking, Computer Vision, Natural Language Processing.</p>
-            <p class="text-slate-600"><strong class="font-medium text-slate-700">Term Project:</strong> Parameterized Algorithms and Experiments (Focused on Vertex Cover - see Projects section).</p>
+            <p class="text-lg text-slate-700 font-medium mb-1.5">Indian Institute of Technology (IIT), Palakkad</p>
+            <p class="text-sm text-slate-500 mb-5">Aug 2019 - May 2023</p>
+            <p class="text-slate-600 mb-3 leading-relaxed"><strong class="font-medium text-slate-700">Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Artificial Intelligence, Database Management Systems, Computer Networking, Computer Vision, Natural Language Processing.</p>
+            <p class="text-slate-600 leading-relaxed"><strong class="font-medium text-slate-700">Term Project:</strong> Parameterized Algorithms and Experiments (Focused on Vertex Cover - see Projects section).</p>
           </div>
         </div>
       </section>
 
-       <section id="achievements" class="py-20 md:py-28 bg-slate-100">
+       <div class="section-divider bg-white"></div>
+
+       <section id="achievements" class="py-24 md:py-32 bg-slate-50">
         <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-award text-primary-600"></i> Achievements
+           <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900 flex items-center justify-center" data-aos="fade-up">
+             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-primary-600"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            Achievements
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-center">
-            <div class="bg-white p-8 shadow-lg rounded-xl" data-aos="fade-up">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto text-center">
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300" data-aos="fade-up">
               <p class="text-xl font-semibold text-primary-700 mb-2">JEE Advanced 2019</p>
-              <p class="text-2xl md:text-3xl font-bold text-slate-800">AIR 3,787</p>
-              <p class="text-slate-500 mt-1">(Top 2.9% of 130,000+ students)</p>
+              <p class="text-3xl md:text-4xl font-bold text-slate-800">AIR 3,787</p>
+              <p class="text-slate-500 mt-2">(Top 2.9% of 130,000+ students)</p>
             </div>
-            <div class="bg-white p-8 shadow-lg rounded-xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-8 shadow-subtle rounded-xl border border-slate-200/50 hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
               <p class="text-xl font-semibold text-primary-700 mb-2">JEE Mains 2019</p>
-              <p class="text-2xl md:text-3xl font-bold text-slate-800">AIR 5,484</p>
-              <p class="text-slate-500 mt-1">(Top 0.34% of 1.6 million students)</p>
+              <p class="text-3xl md:text-4xl font-bold text-slate-800">AIR 5,484</p>
+              <p class="text-slate-500 mt-2">(Top 0.34% of 1.6 million students)</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="extracurricular" class="py-20 md:py-28 bg-white">
+      <div class="section-divider bg-slate-50 rotate-180"></div>
+
+      <section id="extracurricular" class="py-24 md:py-32 bg-white">
         <div class="container mx-auto px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24">
             <div data-aos="fade-right">
-              <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900">
+              <h2 class="text-3xl md:text-4xl font-bold mb-10 text-slate-900">
                  Extracurricular
               </h2>
-              <div class="space-y-6">
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Hackathon Participation</p>
-                  <p class="text-slate-600">
+              <div class="space-y-8">
+                <div class="bg-slate-50/60 p-6 shadow-subtle rounded-xl border border-slate-200/50 transition-shadow duration-300 hover:shadow-lg">
+                  <p class="text-lg font-semibold text-primary-700 mb-2">Hackathon Participation</p>
+                  <p class="text-slate-600 leading-relaxed">
                     Participated in an ICICI Bank hackathon, building a prototype system for central KYC using Django and face matching techniques for identity verification.
                   </p>
                 </div>
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Mentorship</p>
-                  <p class="text-slate-600">
+                <div class="bg-slate-50/60 p-6 shadow-subtle rounded-xl border border-slate-200/50 transition-shadow duration-300 hover:shadow-lg">
+                  <p class="text-lg font-semibold text-primary-700 mb-2">Mentorship</p>
+                  <p class="text-slate-600 leading-relaxed">
                     Provided mentorship and guidance to junior team members, fostering knowledge sharing and technical growth within the team.
                   </p>
                 </div>
@@ -394,25 +428,26 @@
             </div>
 
             <div data-aos="fade-left" id="hobbies">
-               <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900">
-                 <i class="lucide lucide-gamepad-2 text-primary-600"></i> Hobbies & Interests
+               <h2 class="text-3xl md:text-4xl font-bold mb-10 text-slate-900 flex items-center">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-primary-600"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.01.152v7.256a4 4 0 0 0 3.978 4.402A5.19 5.19 0 0 0 7 20h10a5.19 5.19 0 0 0 .32-.002 4 4 0 0 0 3.978-4.402V8.742c0-.05-.004-.1-.01-.152A4 4 0 0 0 17.32 5z"/></svg>
+                 Hobbies & Interests
               </h2>
-               <div class="space-y-6">
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Emerging Technologies</p>
-                  <p class="text-slate-600">
+               <div class="space-y-8">
+                <div class="bg-slate-50/60 p-6 shadow-subtle rounded-xl border border-slate-200/50 transition-shadow duration-300 hover:shadow-lg">
+                  <p class="text-lg font-semibold text-primary-700 mb-2">Emerging Technologies</p>
+                  <p class="text-slate-600 leading-relaxed">
                     Enthusiastic about staying updated on cutting-edge tech like AI, Quantum Computing, and Web3.
                   </p>
                 </div>
-                <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Astrophysics</p>
-                  <p class="text-slate-600">
+                <div class="bg-slate-50/60 p-6 shadow-subtle rounded-xl border border-slate-200/50 transition-shadow duration-300 hover:shadow-lg">
+                  <p class="text-lg font-semibold text-primary-700 mb-2">Astrophysics</p>
+                  <p class="text-slate-600 leading-relaxed">
                     Fascinated by the mysteries of the universe, regularly exploring scientific literature and space exploration news.
                   </p>
                 </div>
-                 <div class="bg-slate-50/50 p-6 shadow-md rounded-xl border border-slate-200">
-                  <p class="text-lg font-semibold text-primary-700 mb-1">Sports & Reading</p>
-                  <p class="text-slate-600">
+                 <div class="bg-slate-50/60 p-6 shadow-subtle rounded-xl border border-slate-200/50 transition-shadow duration-300 hover:shadow-lg">
+                  <p class="text-lg font-semibold text-primary-700 mb-2">Sports & Reading</p>
+                  <p class="text-slate-600 leading-relaxed">
                     Enjoy playing Cricket and Table Tennis. Avid reader of Novels and Manga.
                   </p>
                 </div>
@@ -422,48 +457,54 @@
         </div>
       </section>
 
-      <section id="contact" class="py-20 md:py-28 bg-slate-100">
+      <div class="section-divider bg-white"></div>
+
+      <section id="contact" class="py-24 md:py-32 bg-gradient-to-br from-slate-50 to-slate-100">
         <div class="container mx-auto px-6 lg:px-8 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900" data-aos="fade-up">
-            <i class="lucide lucide-contact text-primary-600"></i> Get In Touch
+          <h2 class="text-3xl md:text-4xl font-bold mb-10 text-slate-900 flex items-center justify-center" data-aos="fade-up">
+             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-4 text-primary-600"><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"/><rect width="18" height="18" x="3" y="4" rx="2"/><circle cx="12" cy="10" r="2"/><line x1="8" x2="8" y1="2" y2="4"/><line x1="16" x2="16" y1="2" y2="4"/></svg>
+            Get In Touch
           </h2>
-          <p class="mb-10 text-lg text-slate-600 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-            Interested in collaborating or have any questions? Feel free to reach out!
+          <p class="mb-12 text-lg text-slate-600 max-w-xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            Interested in collaborating or have any questions? I'd love to hear from you. Feel free to reach out!
           </p>
-          <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 text-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex flex-col sm:flex-row justify-center items-center space-y-5 sm:space-y-0 sm:space-x-8 text-lg" data-aos="fade-up" data-aos-delay="200">
             <a
               href="mailto:mohammedabdulazeem821@gmail.com"
-              class="inline-flex items-center text-primary-600 hover:text-primary-800 hover:underline transition-colors font-medium"
+              class="inline-flex items-center text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium group"
             >
-              <i class="lucide lucide-mail"></i> mohammedabdulazeem821@gmail.com
+               <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail Logo" class="w-5 h-5 mr-2 transition-transform group-hover:scale-110">
+              mohammedabdulazeem821@gmail.com
             </a>
-             <span class="hidden sm:inline text-slate-400">|</span>
+             <span class="hidden sm:inline text-slate-300">&bull;</span>
             <a
               href="https://www.linkedin.com/in/mohammed-abdul-azeem-857104192/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center text-primary-600 hover:text-primary-800 hover:underline transition-colors font-medium"
+              class="inline-flex items-center text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium group"
             >
-              <i class="lucide lucide-linkedin"></i> LinkedIn
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2.5 transition-transform group-hover:-translate-y-px"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
             </a>
-             <span class="hidden sm:inline text-slate-400">|</span>
+             <span class="hidden sm:inline text-slate-300">&bull;</span>
             <a
               href="https://github.com/Viper678"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center text-primary-600 hover:text-primary-800 hover:underline transition-colors font-medium"
+              class="inline-flex items-center text-slate-700 hover:text-primary-600 transition-colors duration-200 font-medium group"
             >
-              <i class="lucide lucide-github"></i> GitHub
+               <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub Logo" class="w-5 h-5 mr-2 transition-transform group-hover:scale-110">
+              GitHub
             </a>
           </div>
-           </div>
+        </div>
       </section>
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-6">
+    <footer class="bg-slate-900 text-slate-400 py-8">
       <div class="container mx-auto text-center text-sm">
         <p>&copy; 2024 Mohammed Abdul Azeem. All rights reserved.</p>
-         <p class="mt-1">Built with Tailwind CSS & Lucide Icons.</p>
+         <p class="mt-2 opacity-70">Built with Tailwind CSS & Lucide Icons.</p>
       </div>
     </footer>
 
@@ -472,24 +513,21 @@
       // Initialize AOS
       AOS.init({
           once: true, // Whether animation should happen only once - while scrolling down
-          duration: 600, // values from 0 to 3000, with step 50ms
+          duration: 800, // Slightly longer duration for smoother effect
           easing: 'ease-in-out', // default easing for AOS animations
+          offset: 50, // Trigger animations slightly earlier
       });
 
       // Mobile Menu Toggle
       const menuBtn = document.getElementById('menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = menuBtn.querySelector('i');
+      const menuIconOpen = document.getElementById('menu-icon-open');
+      const menuIconClose = document.getElementById('menu-icon-close');
 
       menuBtn.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('hidden');
-        if (isOpen) {
-            menuIcon.classList.remove('lucide-menu');
-            menuIcon.classList.add('lucide-x');
-        } else {
-             menuIcon.classList.remove('lucide-x');
-             menuIcon.classList.add('lucide-menu');
-        }
+        mobileMenu.classList.toggle('hidden');
+        menuIconOpen.classList.toggle('hidden');
+        menuIconClose.classList.toggle('hidden');
       });
 
       // Close mobile menu when a link is clicked
@@ -497,21 +535,30 @@
       mobileLinks.forEach(link => {
           link.addEventListener('click', () => {
               mobileMenu.classList.add('hidden');
-              menuIcon.classList.remove('lucide-x');
-              menuIcon.classList.add('lucide-menu');
+              menuIconOpen.classList.remove('hidden');
+              menuIconClose.classList.add('hidden');
           });
       });
 
-      // Optional: Change navbar background on scroll
+      // Change navbar background on scroll
       const navbar = document.getElementById('navbar');
+      let lastScrollTop = 0;
       window.addEventListener('scroll', () => {
-          if (window.scrollY > 50) {
-              navbar.classList.add('bg-slate-900'); // More opaque background
-              navbar.classList.remove('bg-slate-900/70');
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          if (scrollTop > 50) {
+              navbar.classList.add('bg-slate-900', 'shadow-lg');
+              navbar.classList.remove('bg-slate-900/80');
           } else {
-              navbar.classList.remove('bg-slate-900');
-              navbar.classList.add('bg-slate-900/70'); // Semi-transparent background
+              navbar.classList.remove('bg-slate-900', 'shadow-lg');
+              navbar.classList.add('bg-slate-900/80');
           }
+          // Optional: Hide navbar on scroll down, show on scroll up
+          // if (scrollTop > lastScrollTop && scrollTop > 100) {
+          //    navbar.style.top = '-80px'; // Adjust based on navbar height
+          // } else {
+          //    navbar.style.top = '0';
+          // }
+          // lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
       });
 
     </script>
